@@ -16,7 +16,7 @@ while True:
         print('Insira um nome com mais de 3 caracteres!')
 
     while True:
-      idade_users = str(input('Diite a sua idade em anos:\t')).lstrip('0').lstrip(' ')
+      idade_users = str(input('Digite a sua idade em anos:\t')).lstrip('0').lstrip(' ')
       if idade_users.isnumeric() == True:
         idade_users = int(idade_users)
 
@@ -44,7 +44,7 @@ while True:
         profissão.append(profissão_users)
         break
       else:
-        print('Diite uma profissão válida!')
+        print('Digite uma profissão válida!')
 
     while True:
       salario_users = str(input('Qual o valor do seu salário?\t'))
@@ -55,9 +55,9 @@ while True:
           salario.append(salario_users)
           break
         else:
-          print('Diite um salário válido!')      
+          print('Digite um salário válido!')      
       else:
-        print('Diite um salário válido!')
+        print('Digite um salário válido!')
 
     while True:
       civil_users = str(input('Qual o seu estado civil (Solteiro/Casado/Viúvo/Divorciado)?')).upper()
@@ -66,7 +66,7 @@ while True:
         estado_civil.append(civil_users)
         break
       else:
-        print('Diite um estado civil válido! ')
+        print('Digite um estado civil válido! ')
 
     while True:
       continua = input('Deseja cadastrar outra pessoa?\n 1 - SIM\n 2 - NÃO\n')
@@ -74,7 +74,7 @@ while True:
         continuar == '1'
         print('Cadastre outro usuário:')
       elif continua != '1' and continua != '2':
-        print('Diite um valor válido!')
+        print('Digite um valor válido!')
       else:
         continuar = '2'
         break
