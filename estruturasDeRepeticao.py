@@ -5,7 +5,26 @@ profissão = []
 salario = []
 estado_civil = []
 continuar = '1'
+contador = 0
 while True:
+
+  while True:
+    if contador > 0:
+      continua = input('Deseja cadastrar outra pessoa?\n 1 - SIM\n 2 - NÃO\n')
+    else:
+      continua = input('Deseja realizar um cadastro?\n 1 - SIM\n 2 - NÃO\n')
+
+    if continua == '1':
+      contador += 1
+      continuar == '1'
+      print('Cadastre outro usuário:')
+      break
+    elif continua != '1' and continua != '2':
+      print('Diite um valor válido!')
+    else:
+      continuar = '2'
+      break
+
   if continuar == '1':
     while True:
       nome_users = input('Digite seu nome completo:\t').upper().lstrip(' ')
@@ -68,16 +87,6 @@ while True:
       else:
         print('Digite um estado civil válido! ')
 
-    while True:
-      continua = input('Deseja cadastrar outra pessoa?\n 1 - SIM\n 2 - NÃO\n')
-      if continua == '1':
-        continuar == '1'
-        print('Cadastre outro usuário:')
-      elif continua != '1' and continua != '2':
-        print('Digite um valor válido!')
-      else:
-        continuar = '2'
-        break
   else:
     print('Encerrando sistema...')
     break
