@@ -17,7 +17,7 @@ while True:
     if continua == '1':
       contador += 1
       continuar == '1'
-      print('Cadastre outro usuário:')
+      print('Cadastre um usuário:')
       break
     elif continua != '1' and continua != '2':
       print('Diite um valor válido!')
@@ -69,7 +69,7 @@ while True:
       salario_users = str(input('Qual o valor do seu salário?\t'))
 
       if salario_users.isnumeric() == True:
-        salario_users = int(salario_users)
+        salario_users = float(salario_users)
         if salario_users > 0:
           salario.append(salario_users)
           break
@@ -86,7 +86,16 @@ while True:
         break
       else:
         print('Digite um estado civil válido! ')
-
   else:
+    print(f'Cadastros feitos:\t{contador}\n')
+
+    for prints in range(len(nome)):
+      print(f'Usuário: {nome[prints]}')
+      print(f'Idade: {idade[prints]}')
+      print(f'Sexo: {sexo[prints]}')
+      print(f'Profissão: {profissão[prints]}')
+      print(f'Salário: R$ {salario[prints]}')
+      print(f'Estado Civil: {estado_civil[prints]}\n')
+
     print('Encerrando sistema...')
     break
