@@ -99,3 +99,29 @@ while True:
 
     print('Encerrando sistema...')
     break
+
+while True:
+  acao = int(input('Qual ação você deseja realizar? (Escolha um número)\n1 - Cadastrar usuário\n2 - Visualizar usuário\n3 - Sair\n'))
+  if acao == 1:
+    print('cadastro')
+    break
+  elif acao == 2:
+    print('---------- USUÁRIOS ----------')
+    for usuarios in range(len(nome)):
+      print(f'{usuarios+1} - {nome[usuarios]}')
+    visualizar = int(input('\nPor favor, digite a numeração do usuário que você deseja visualizar:\t'))
+    if visualizar-1 >= len(nome):
+      print('Cadastro não existente!')
+      break
+    else:
+      for i in range(0,1):
+        print(f'\n---------- USUÁRIO: {nome[visualizar-1]} ----------')
+        
+        print(f'Idade: {idade[visualizar-1]}')
+        print(f'Sexo: {sexo[visualizar-1]}')
+        print(f'Profissão: {profissão[visualizar-1]}')
+        print(f'Salário: R$ {salario[visualizar-1]}')
+        print(f'Estado Civil: {estado_civil[visualizar-1]}')
+      break
+  else:
+    break
