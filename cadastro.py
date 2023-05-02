@@ -40,10 +40,10 @@ class User:
         
     def getUsers (self):
         return {
-            "name": user.name,
-            "birth_day": user.birth_day,
-            "gender": user.gender,
-            "career": user.career,
-            "remuneration": user.remuneration,
-            "marital_status": user.marital_status
+            "name": self.name,
+            "birth_day": self.birth_day,
+            "gender": self.gender,
+            "career": self.career,
+            "remuneration": self.remuneration,
+            "marital_status": self.marital_status
         }
